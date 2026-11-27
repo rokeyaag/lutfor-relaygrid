@@ -6,8 +6,7 @@ Every day at **00:00 UTC**, every player receives the exact same deterministic *
 
 ## Links
 
-- **Live Demo Post:** https://www.reddit.com/r/lutfor_games/comments/1y6thia/relaygrid_17_daily_signal_puzzle_20261127/
-- **Subreddit:** https://www.reddit.com/r/lutfor_games
+- **Live Demo Subreddit:** https://www.reddit.com/r/lutfor_relaygrid_dev
 - **Reddit App Listing:** https://developers.reddit.com/apps/lutfor-relaygrid
 - **GitHub Repository:** https://github.com/rokeyaag/lutfor-relaygrid
 

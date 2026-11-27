@@ -1,9 +1,6 @@
 {
   "$schema": "https://developers.reddit.com/schema/config-file.v1.json",
   "name": "lutfor-relaygrid",
-  "dev": {
-    "subreddit": "lutfor_games"
-  },
   "permissions": {
     "redis": true,
     "reddit": {
@@ -53,5 +50,10 @@
     "dev": "vite build --watch",
     "build": "vite build"
   },
-  "sourceIgnores": ["demo/"]
+  "sourceIgnores": [
+    "demo/"
+  ],
+  "dev": {
+    "subreddit": "lutfor_relaygrid_dev"
+  }
 }
