@@ -1,0 +1,41 @@
+@import 'tailwindcss';
+
+@layer base {
+  html,
+  body {
+    overscroll-behavior: none;
+    touch-action: manipulation;
+  }
+}
+
+@keyframes beamPulse {
+  0%,
+  100% {
+    opacity: 0.92;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes nodePulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+  50% {
+    transform: scale(1.18);
+    opacity: 0.15;
+  }
+}
+
+.beam-pulse {
+  animation: beamPulse 1.8s ease-in-out infinite;
+}
+
+.node-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: nodePulse 1.9s ease-in-out infinite;
+}
