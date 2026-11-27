@@ -1,0 +1,19 @@
+1
+00:00:00,450 --> 00:00:10,458
+Meet RelayGrid: a bite-sized daily optical puzzle built natively for Reddit with Devvit Web. Every day at midnight UTC, everyone gets the exact same six-by-six grid.
+
+2
+00:00:11,358 --> 00:00:21,030
+Tap any open cell to angle mirrors and route the amber beam through every glowing relay node. Nodes pass light straight through, and hitting the Par target turns the circuit emerald green.
+
+3
+00:00:22,030 --> 00:00:30,838
+Lock in your score to reveal the verified result card, track your daily streak, see your live rank, and share a spoiler-free summary right into the thread comments.
+
+4
+00:00:31,738 --> 00:00:42,610
+Under the hood, RelayGrid enforces zero-trust server validation, Redis idempotency locks, rate limiting, and an exact solver verified across four hundred consecutive daily puzzles.
+
+5
+00:00:43,510 --> 00:00:47,350
+RelayGrid. Built natively for Reddit's Game of the Day Hackathon.

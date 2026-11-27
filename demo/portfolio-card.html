@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RelayGrid — Portfolio Project Card</title>
+    <style>
+      :root {
+        --bg: #070b14;
+        --card: #0f172a;
+        --border: rgba(148, 163, 184, 0.22);
+        --text: #f8fafc;
+        --muted: #94a3b8;
+        --amber: #f59e0b;
+        --emerald: #10b981;
+        --cyan: #38bdf8;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+        background: radial-gradient(circle at 50% 25%, #16223b 0%, var(--bg) 70%);
+        font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        color: var(--text);
+      }
+      .portfolio-card {
+        width: 100%;
+        max-width: 440px;
+        border-radius: 24px;
+        overflow: hidden;
+        background: var(--card);
+        border: 1px solid var(--border);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+        transition: transform 0.25s ease, border-color 0.25s ease;
+      }
+      .portfolio-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(245, 158, 11, 0.55);
+      }
+      .card-front-face {
+        position: relative;
+        height: 230px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        background:
+          linear-gradient(rgba(56, 189, 248, 0.06) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(56, 189, 248, 0.06) 1px, transparent 1px),
+          radial-gradient(circle at 50% 45%, rgba(16, 185, 129, 0.16), rgba(11, 17, 32, 0.96));
+        background-size: 28px 28px, 28px 28px, 100% 100%;
+        border-bottom: 1px solid var(--border);
+      }
+      .badge-top {
+        position: absolute;
+        top: 14px;
+        left: 16px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        padding: 5px 10px;
+        border-radius: 999px;
+        background: rgba(245, 158, 11, 0.14);
+        color: #fbbf24;
+        border: 1px solid rgba(245, 158, 11, 0.35);
+      }
+      .badge-live {
+        position: absolute;
+        top: 14px;
+        right: 16px;
+        font-size: 11px;
+        font-weight: 700;
+        padding: 5px 10px;
+        border-radius: 999px;
+        background: rgba(16, 185, 129, 0.16);
+        color: #34d399;
+        border: 1px solid rgba(16, 185, 129, 0.35);
+      }
+      .front-logo {
+        width: 112px;
+        height: 112px;
+        border-radius: 24px;
+        object-fit: cover;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+        border: 1px solid rgba(245, 158, 11, 0.35);
+      }
+      .front-title {
+        font-size: 22px;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+      .card-body {
+        padding: 20px 22px 22px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+      .summary {
+        font-size: 14px;
+        line-height: 1.55;
+        color: #cbd5e1;
+      }
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+      }
+      .tag {
+        font-size: 11.5px;
+        font-weight: 600;
+        padding: 4px 10px;
+        border-radius: 8px;
+        background: rgba(30, 41, 59, 0.9);
+        color: var(--cyan);
+        border: 1px solid rgba(56, 189, 248, 0.2);
+      }
+      .actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-top: 4px;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        border-radius: 12px;
+        font-size: 13px;
+        font-weight: 700;
+        text-decoration: none;
+        transition: opacity 0.18s ease, transform 0.15s ease;
+      }
+      .btn:hover {
+        opacity: 0.92;
+        transform: translateY(-1px);
+      }
+      .btn-primary {
+        background: var(--amber);
+        color: #090d16;
+      }
+      .btn-secondary {
+        background: #1e293b;
+        color: var(--text);
+        border: 1px solid var(--border);
+      }
+      .btn-full {
+        grid-column: span 2;
+        background: rgba(16, 185, 129, 0.14);
+        color: #34d399;
+        border: 1px solid rgba(16, 185, 129, 0.35);
+      }
+    </style>
+  </head>
+  <body>
+    <article class="portfolio-card">
+      <div class="card-front-face">
+        <span class="badge-top">Reddit Hackathon</span>
+        <span class="badge-live">● Live on Devvit</span>
+        <img
+          src="./brand/relaygrid-logo.png"
+          alt="RelayGrid optical puzzle logo"
+          class="front-logo"
+        />
+        <h2 class="front-title">RelayGrid</h2>
+      </div>
+
+      <div class="card-body">
+        <p class="summary">
+          Daily 6×6 optical mirror &amp; signal-routing puzzle built natively for
+          Reddit. Verified across 400 consecutive UTC days with zero-trust
+          server re-simulation and Redis idempotency.
+        </p>
+
+        <div class="tags">
+          <span class="tag">Devvit Web</span>
+          <span class="tag">React 19</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">Hono</span>
+          <span class="tag">Redis</span>
+          <span class="tag">Tailwind 4</span>
+        </div>
+
+        <div class="actions">
+          <a
+            class="btn btn-primary"
+            href="https://www.reddit.com/r/lutfor_games/comments/1y6thia/relaygrid_17_daily_signal_puzzle_20261127/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Play Live Demo
+          </a>
+          <a
+            class="btn btn-secondary"
+            href="https://github.com/rokeyaag/lutfor-relaygrid"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub Source
+          </a>
+          <a class="btn btn-full" href="./relaygrid-demo-4k.mp4" target="_blank">
+            Watch 4K Demo Video
+          </a>
+        </div>
+      </div>
+    </article>
+  </body>
+</html>
