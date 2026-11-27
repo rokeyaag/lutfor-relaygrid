@@ -4,6 +4,13 @@
 
 Every day at **00:00 UTC**, every player receives the exact same deterministic **6×6 optical grid**. Your goal is to angle mirrors (`/` and `\`) to route the emitter's beam through all glowing relay nodes simultaneously — in as few mirrors as possible.
 
+## Links
+
+- **Live Demo Post:** https://www.reddit.com/r/lutfor_games/comments/1y6thia/relaygrid_17_daily_signal_puzzle_20261127/
+- **Subreddit:** https://www.reddit.com/r/lutfor_games
+- **Reddit App Listing:** https://developers.reddit.com/apps/lutfor-relaygrid
+- **GitHub Repository:** https://github.com/rokeyaag/lutfor-relaygrid
+
 ---
 
 ## How to Play
